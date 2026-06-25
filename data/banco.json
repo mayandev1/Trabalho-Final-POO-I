@@ -1,6 +1,59 @@
 {
-    "Clientes" : [],
-    "Proprietarios" : [],
-    "Imoveis" : [],
-    "Negociacoes" : []
+    "Clientes": [
+        {
+            "Id": 1,
+            "Nome": "Ana Teste",
+            "CPF": "12345678901",
+            "Telefone": "88999999999",
+            "interesse": "Casa",
+            "tipo": "Cliente"
+        },
+        {
+            "Id": 1,
+            "Nome": "Ana Teste",
+            "CPF": "12345678901",
+            "Telefone": "88999999999",
+            "interesse": "Casa",
+            "tipo": "Cliente"
+        },
+        {
+            "Id": 1,
+            "Nome": "Ana Teste",
+            "CPF": "12345678901",
+            "Telefone": "88999999999",
+            "interesse": "Casa",
+            "tipo": "Cliente"
+        }
+    ],
+    "Proprietarios": [],
+    "Imoveis": [
+        {
+            "id": 1,
+            "endereco": "Centro da Cidade",
+            "valor": 250000,
+            "status": "disponivel",
+            "quartos": 3,
+            "area": 120,
+            "tipo": "Casa"
+        },
+        {
+            "id": 1,
+            "endereco": "Centro da Cidade",
+            "valor": 250000,
+            "status": "disponivel",
+            "quartos": 3,
+            "area": 120,
+            "tipo": "Casa"
+        },
+        {
+            "id": 1,
+            "endereco": "Centro da Cidade",
+            "valor": 250000,
+            "status": "disponivel",
+            "quartos": 3,
+            "area": 120,
+            "tipo": "Casa"
+        }
+    ],
+    "Negociacoes": []
 }
