@@ -293,7 +293,7 @@ Nesta seção podem ser adicionadas capturas de tela do funcionamento do sistema
 
 | Integrante | Função |
 |------------|---------|
-| **Allana Camily de Sousa Martins** | Desenvolvimento |
+| **Allana Camily** | Desenvolvimento |
 | **Mayan** | Desenvolvimento |
 
 ---
@@ -320,6 +320,6 @@ Este projeto foi desenvolvido exclusivamente para fins acadêmicos como trabalho
 
 ## Obrigado por visitar este projeto!
 
-Desenvolvido por **Allana Camily de Sousa Martins** e **Mayan**
+Desenvolvido por **Allana Camily** e **Mayan**
 
 </div>
