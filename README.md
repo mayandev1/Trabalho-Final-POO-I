@@ -372,6 +372,6 @@ Este projeto foi desenvolvido exclusivamente para fins acadêmicos como trabalho
 
 ## Obrigado por visitar este projeto!
 
-Desenvolvido por **Allana Camily** e **Mayan**
+Desenvolvido por **Allana Martins** e **Mayan**
 
 </div>
