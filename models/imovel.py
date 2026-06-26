@@ -33,6 +33,14 @@ class Imovel:
         self.disponivel = False
         self.cliente_cpf = cliente_cpf
 
+    @staticmethod
+    def deletar_imovel(lista_imoveis, codigo):
+        for imovel in lista_imoveis:
+            if imovel.codigo == codigo:
+                lista_imoveis.remove(imovel)
+                return True
+        return False
+
     def to_dict_base(self):
         return {
             "codigo": self.codigo,

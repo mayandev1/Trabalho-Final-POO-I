@@ -1,5 +1,6 @@
 from utils import cabecalho, pausa, ler_opcao, ler_texto, ler_sim_nao, imprimir_lista, limpar_tela
 from services import Validacoes
+from models.imovel import Imovel
 
 
 def menu_imoveis(imobiliaria):
@@ -12,6 +13,7 @@ def menu_imoveis(imobiliaria):
         print("4 - Listar disponíveis")
         print("5 - Buscar por código")
         print("6 - Busca avançada")
+        print("7 - Remover imóvel")
         print("0 - Voltar")
         opcao = ler_opcao()
 
@@ -39,6 +41,12 @@ def menu_imoveis(imobiliaria):
                 print(imovel if imovel else "Imóvel não encontrado.")
             elif opcao == "6":
                 busca_avancada(imobiliaria)
+            elif opcao == "7":
+                codigo = int(ler_texto("Código do imóvel"))
+                if Imovel.deletar_imovel(imobiliaria.imoveis, codigo):
+                    print("Imóvel removido com sucesso!")
+                else:
+                    print("Imóvel não encontrado.")
             elif opcao == "0":
                 break
             else:

@@ -1,4 +1,5 @@
 from utils import cabecalho, pausa, ler_opcao, ler_texto, imprimir_lista, limpar_tela
+from models.proprietario import Proprietario
 
 def menu_proprietarios(imobiliaria):
     while True:
@@ -7,6 +8,7 @@ def menu_proprietarios(imobiliaria):
         print("1 - Cadastrar proprietário")
         print("2 - Listar proprietários")
         print("3 - Buscar proprietário por CPF")
+        print("4 - Remover proprietario")
         print("0 - Voltar")
         opcao = ler_opcao()
 
@@ -21,6 +23,12 @@ def menu_proprietarios(imobiliaria):
             elif opcao == "3":
                 proprietario = imobiliaria.buscar_proprietario_por_cpf(ler_texto("CPF"))
                 print(proprietario if proprietario else "Proprietário não encontrado.")
+            elif opcao == "4":
+                cpf = ler_texto("CPF do proprietário")
+                if Proprietario.deletar_proprietario(imobiliaria.proprietarios, cpf):
+                    print("Proprietário removido com sucesso!")
+                else:
+                    print("Proprietario não encontrado.")
             elif opcao == "0":
                 break
             else:
