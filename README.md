@@ -291,10 +291,62 @@ Nesta seção podem ser adicionadas capturas de tela do funcionamento do sistema
 
 # 👥 Equipe
 
-| Integrante | Função |
-|------------|---------|
-| **Allana Camily** | Desenvolvimento |
-| **Mayan** | Desenvolvimento |
+| Integrante | Área de Atuação | Principais Responsabilidades |
+|------------|-----------------|------------------------------|
+| **Allana Martins** | Backend e Regras de Negócio | Modelagem das classes, implementação das regras de negócio, validações, persistência em JSON, negociações, cálculo de taxas administrativas, tratamento de exceções e desenvolvimento da lógica do sistema. |
+| **Mayan** | Interface e Integração | Desenvolvimento da interface do sistema, criação dos menus, integração entre interface e backend, navegação, componentes visuais e relatórios gráficos. |
+
+---
+
+# 🤝 Divisão das Responsabilidades
+
+## 👩‍💻 Allana Martins
+
+Responsável pelo desenvolvimento da lógica do sistema (**Backend**), incluindo:
+
+- Implementação da classe `Pessoa`;
+- Implementação da classe `Cliente`;
+- Implementação da classe `Proprietário`;
+- Implementação da classe `Imóvel`;
+- Implementação da classe `Casa`;
+- Implementação da classe `Apartamento`;
+- Regras de cadastro;
+- Negociações de venda e aluguel;
+- Validações dos dados;
+- Tratamento de exceções;
+- Persistência de dados em arquivos JSON;
+- Controle de disponibilidade dos imóveis;
+- Geração de códigos dos imóveis;
+- Implementação dos relatórios relacionados ao backend.
+
+---
+
+## 💻 Mayan
+
+Responsável pelo desenvolvimento da **Interface** e integração do sistema, incluindo:
+
+- Interface do sistema;
+- Menus de navegação;
+- Telas de cadastro;
+- Telas de consultas;
+- Telas de negociações;
+- Relatórios gráficos;
+- Integração entre interface e backend;
+- Componentes visuais;
+- Experiência do usuário.
+
+---
+
+## 🤝 Desenvolvimento em Equipe
+
+Além das responsabilidades individuais, ambos participaram das seguintes etapas:
+
+- Planejamento do sistema;
+- Testes da aplicação;
+- Correção de erros;
+- Integração dos módulos;
+- Documentação do projeto;
+- Apresentação final.
 
 ---
 
