@@ -1,10 +1,10 @@
 from .pessoa import Pessoa
 
-class Proprietario(Pessoa):
-    def __init__(self, id_pessoa, nome, cpf, telefone):
-        super().__init__(id_pessoa, nome, cpf, telefone)
 
-    def to_dict(self):
-        data = super().to.dict()
-        data["tipo"] = "Proprietario"
-        return data
+class Proprietario(Pessoa):
+    def __init__(self, nome, cpf, telefone, email):
+        super().__init__(nome, cpf, telefone, email)
+
+    @classmethod
+    def from_dict(cls, dados):
+        return cls(dados.get("nome", ""), dados.get("cpf", ""), dados.get("telefone", ""), dados.get("email", ""))

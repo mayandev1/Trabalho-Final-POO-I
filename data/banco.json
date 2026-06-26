@@ -1,6 +1,106 @@
 {
-  "Clientes": [],
-  "Proprietarios": [],
-  "Imoveis": [],
-  "Negociacoes": []
+    "clientes": [
+        {
+            "nome": "João Lima",
+            "cpf": "33344455566",
+            "telefone": "89977776666",
+            "email": "joao@email.com"
+        },
+        {
+            "nome": "Mariana Costa",
+            "cpf": "44455566677",
+            "telefone": "89966665555",
+            "email": "mariana@email.com"
+        },
+        {
+            "nome": "Mayan",
+            "cpf": "09447647383",
+            "telefone": "89994167183",
+            "email": "mayan@gmail.com"
+        }
+    ],
+    "proprietarios": [
+        {
+            "nome": "Carlos Silva",
+            "cpf": "11122233344",
+            "telefone": "89999990000",
+            "email": "carlos@email.com"
+        },
+        {
+            "nome": "Ana Souza",
+            "cpf": "22233344455",
+            "telefone": "89988887777",
+            "email": "ana@email.com"
+        }
+    ],
+    "imoveis": [
+        {
+            "codigo": 5,
+            "proprietario_cpf": "11122233344",
+            "endereco": "Rua A, 100",
+            "cidade": "Picos",
+            "modalidade": "venda",
+            "valor": 250000.0,
+            "metragem": 280.0,
+            "data_cadastro": "10/01/2026",
+            "disponivel": false,
+            "cliente_cpf": "33344455566",
+            "tipo": "casa",
+            "piscina": true
+        },
+        {
+            "codigo": 6,
+            "proprietario_cpf": "22233344455",
+            "endereco": "Rua B, 200",
+            "cidade": "Picos",
+            "modalidade": "aluguel",
+            "valor": 1200.0,
+            "metragem": 180.0,
+            "data_cadastro": "15/02/2026",
+            "disponivel": true,
+            "cliente_cpf": null,
+            "tipo": "casa",
+            "piscina": false
+        },
+        {
+            "codigo": 7,
+            "proprietario_cpf": "11122233344",
+            "endereco": "Av. Central, 300",
+            "cidade": "Teresina",
+            "modalidade": "venda",
+            "valor": 320000.0,
+            "metragem": 70.0,
+            "data_cadastro": "20/03/2026",
+            "disponivel": true,
+            "cliente_cpf": null,
+            "tipo": "apartamento",
+            "andar": 5,
+            "numero_apartamento": "502"
+        },
+        {
+            "codigo": 8,
+            "proprietario_cpf": "22233344455",
+            "endereco": "Rua das Flores, 50",
+            "cidade": "Picos",
+            "modalidade": "aluguel",
+            "valor": 900.0,
+            "metragem": 45.0,
+            "data_cadastro": "05/04/2026",
+            "disponivel": true,
+            "cliente_cpf": null,
+            "tipo": "apartamento",
+            "andar": 2,
+            "numero_apartamento": "203"
+        }
+    ],
+    "negociacoes": [
+        {
+            "codigo_imovel": 5,
+            "cpf_cliente": "33344455566",
+            "nome_cliente": "João Lima",
+            "modalidade": "venda",
+            "valor": 250000.0,
+            "data": "25/06/2026 22:28"
+        }
+    ]
 }

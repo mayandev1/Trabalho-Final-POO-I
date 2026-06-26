@@ -1,16 +1,10 @@
 from .pessoa import Pessoa
 
-class Cliente(Pessoa):
-    def __init__(self, id_pessoa, nome, cpf, telefone, interesse):
-        super().__init__(id_pessoa, nome, cpf, telefone)
-        self.__interesse = interesse
 
-    @property
-    def interesse(self):
-        return self.__interesse
-    
-    def to_dict(self):
-        data = super().to_dict()
-        data["interesse"] = self.__interesse
-        data["tipo"] =  "Cliente"
-        return data
+class Cliente(Pessoa):
+    def __init__(self, nome, cpf, telefone, email):
+        super().__init__(nome, cpf, telefone, email)
+
+    @classmethod
+    def from_dict(cls, dados):
+        return cls(dados.get("nome", ""), dados.get("cpf", ""), dados.get("telefone", ""), dados.get("email", ""))

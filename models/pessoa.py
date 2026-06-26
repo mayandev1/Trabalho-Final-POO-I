@@ -1,30 +1,26 @@
 class Pessoa:
-    def __init__(self, id_pessoa, nome, cpf, telefone):
-        self.__id = id_pessoa
-        self.__nome = nome
-        self.__cpf = cpf
-        self.__telefone = telefone
+    def __init__(self, nome, cpf, telefone, email):
+        self.nome = nome
+        self.cpf = cpf
+        self.telefone = telefone
+        self.email = email
 
-    @property
-    def id(self):
-        return self._id
-        
-    @property
-    def nome(self):
-        return self.__nome
-        
-    @property
-    def cpf(self):
-        return self.__cpf
-        
-    @property
-    def telefone(self):
-        return self.__telefone
-        
     def to_dict(self):
-        return{
-            "Id" : self.__id,
-            "Nome" : self.__nome,
-            "CPF" : self.__cpf,
-            "Telefone" : self.__telefone
-            }
+        return {
+            "nome": self.nome,
+            "cpf": self.cpf,
+            "telefone": self.telefone,
+            "email": self.email
+        }
+
+    @classmethod
+    def from_dict(cls, dados):
+        return cls(
+            dados.get("nome", ""),
+            dados.get("cpf", ""),
+            dados.get("telefone", ""),
+            dados.get("email", "")
+        )
+
+    def __str__(self):
+        return f"{self.nome} | CPF: {self.cpf} | Tel: {self.telefone} | E-mail: {self.email}"
