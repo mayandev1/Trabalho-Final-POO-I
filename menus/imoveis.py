@@ -65,11 +65,10 @@ def busca_avancada(imobiliaria):
     ano = ler_texto("Ano de cadastro") or None
     valor_min = ler_texto("Valor mínimo") or None
     valor_max = ler_texto("Valor máximo") or None
-    proprietario_cpf = ler_texto("CPF do proprietário") or None
 
     disponivel = None
     if status:
         disponivel = Validacoes.validar_sim_nao(status)
 
-    resultado = imobiliaria.buscar_imoveis(cidade, tipo, modalidade, disponivel, ano, valor_min, valor_max, proprietario_cpf)
+    resultado = imobiliaria.buscar_imoveis(cidade, tipo, modalidade, disponivel, ano, valor_min, valor_max)
     imprimir_lista("RESULTADO DA BUSCA", resultado)

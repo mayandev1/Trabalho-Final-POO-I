@@ -1,7 +1,6 @@
 from utils import cabecalho, pausa, ler_opcao, limpar_tela
 from services import Relatorios
 
-
 def menu_relatorios(imobiliaria):
     # menu de relatórios
     while True:

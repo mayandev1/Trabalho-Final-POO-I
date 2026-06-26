@@ -1,5 +1,3 @@
-# services/dados_exemplo.py
-
 import json
 from pathlib import Path
 
@@ -7,10 +5,7 @@ from models import Cliente, Proprietario, Casa, Apartamento
 
 
 def carregar_dados_exemplo(imobiliaria):
-    """
-    Carrega os dados de exemplo a partir do arquivo
-    data/dados_exemplo.json.
-    """
+    # Carrega os dados de exemplo a partir do arquivo .json
 
     caminho = Path(__file__).resolve().parent.parent / "data" / "dados_exemplo.json"
 
@@ -22,7 +17,7 @@ def carregar_dados_exemplo(imobiliaria):
     imobiliaria.imoveis.clear()
     imobiliaria.negociacoes.clear()
 
-    # Clientes ----------------
+    # Clientes 
     for cliente in dados["clientes"]:
         imobiliaria.clientes.append(
             Cliente(
