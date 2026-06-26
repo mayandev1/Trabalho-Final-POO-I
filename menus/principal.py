@@ -36,9 +36,13 @@ class MenuPrincipal:
             elif opcao == "5":
                 menu_relatorios(self.imobiliaria)
             elif opcao == "6":
-                carregar_dados_exemplo(self.imobiliaria)
-                Persistencia.salvar_dados(self.imobiliaria)
-                print("Dados de exemplo carregados e salvos.")
+                confirmar = input("Isso vai apagar os dados atuais. Digite SIM para confirmar: ")
+                if confirmar == "SIM":
+                    carregar_dados_exemplo(self.imobiliaria)
+                    Persistencia.salvar_dados(self.imobiliaria)
+                    print("Dados de exemplo carregados e salvos.")
+                else:
+                    print("Operação cancelada.")
                 pausa()
             elif opcao == "7":
                 Persistencia.salvar_dados(self.imobiliaria)

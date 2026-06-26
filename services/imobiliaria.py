@@ -2,7 +2,6 @@ from datetime import datetime
 from models import Cliente, Proprietario, Casa, Apartamento
 from .validacoes import Validacoes
 
-
 class Imobiliaria:
     def __init__(self):
         self.clientes = []
@@ -108,7 +107,7 @@ class Imobiliaria:
     def listar_imoveis_negociados(self):
         return [i for i in self.imoveis if not i.disponivel]
 
-    def buscar_imoveis(self, cidade=None, tipo=None, modalidade=None, disponivel=None, ano=None, valor_min=None, valor_max=None):
+    def buscar_imoveis(self, cidade=None, tipo=None, modalidade=None, disponivel=None, ano=None, valor_min=None, valor_max=None, proprietario_cpf=None):
         resultado = self.imoveis
         if cidade:
             resultado = [i for i in resultado if i.cidade.lower() == cidade.lower()]
@@ -124,6 +123,9 @@ class Imobiliaria:
             resultado = [i for i in resultado if i.valor >= float(valor_min)]
         if valor_max is not None:
             resultado = [i for i in resultado if i.valor <= float(valor_max)]
+        if proprietario_cpf:
+            cpf = ''.join(ch for ch in str(proprietario_cpf) if ch.isdigit())
+            resultado = [i for i in resultado if i.proprietario_cpf == cpf]
         return resultado
 
     def _validar_imovel_duplicado(self, endereco, cidade):
