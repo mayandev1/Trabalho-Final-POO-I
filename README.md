@@ -28,7 +28,6 @@ Entre os conceitos aplicados estão:
 
 * Cadastro
 * Consulta
-* Atualização
 * Remoção
 * Busca por CPF
 
@@ -36,7 +35,6 @@ Entre os conceitos aplicados estão:
 
 * Cadastro
 * Consulta
-* Atualização
 * Remoção
 * Busca por CPF
 
@@ -45,7 +43,7 @@ Entre os conceitos aplicados estão:
 * Cadastro de casas e apartamentos
 * Código gerado automaticamente
 * Consulta e listagem
-* Atualização e remoção
+* Remoção
 * Controle de disponibilidade
 * Validação de imóveis duplicados
 
