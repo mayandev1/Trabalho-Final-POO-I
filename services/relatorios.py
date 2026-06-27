@@ -52,7 +52,7 @@ class Relatorios:
         return dict(Counter(i.modalidade for i in self.imobiliaria.imoveis))
 
     def quantidade_por_ano(self) -> dict:
-        """Retorna a quantidade de imóveis cadastrados por ano."""
+        # Retorna a quantidade de imóveis cadastrados por ano
         anos = [i.data_cadastro[-4:] for i in self.imobiliaria.imoveis]
         return dict(Counter(anos))
 

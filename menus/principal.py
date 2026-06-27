@@ -6,7 +6,6 @@ from .imoveis import menu_imoveis
 from .negociacoes import menu_negociacoes
 from .relatorios import menu_relatorios
 
-
 class MenuPrincipal:
     def __init__(self):
         self.imobiliaria = Persistencia.carregar_dados()

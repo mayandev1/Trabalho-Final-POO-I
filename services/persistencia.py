@@ -1,13 +1,12 @@
 import json
 from pathlib import Path
 from .imobiliaria import Imobiliaria
-
 class Persistencia:
     CAMINHO_PADRAO = Path("data/banco.json")
 
     @staticmethod
     def carregar_dados(caminho=None):
-        """Carrega os dados do arquivo JSON."""
+        # Carrega os dados do arquivo JSON
         caminho = Path(caminho or Persistencia.CAMINHO_PADRAO)
         if not caminho.exists():
             return Imobiliaria()

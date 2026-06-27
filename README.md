@@ -1,377 +1,173 @@
-<div align="center">
-
 # 🏠 Sistema de Gerenciamento Imobiliário
 
-### Trabalho Final da Disciplina de Programação Orientada a Objetos
+> Trabalho Final da disciplina de **Programação Orientada a Objetos (POO)**.
 
-Sistema desenvolvido em **Python** utilizando os princípios da **Programação Orientada a Objetos (POO)** para o gerenciamento de uma imobiliária, permitindo o cadastro e gerenciamento de clientes, proprietários, imóveis e negociações.
+Sistema desenvolvido em **Python** para gerenciamento de uma imobiliária, permitindo o cadastro de clientes, proprietários e imóveis, realização de negociações, geração de relatórios e persistência dos dados em arquivos JSON.
 
-<br>
+## 📚 Sobre o Projeto
 
-<img src="https://img.shields.io/badge/Python-3.13-blue?style=for-the-badge&logo=python">
-<img src="https://img.shields.io/badge/Status-Concluído-success?style=for-the-badge">
-<img src="https://img.shields.io/badge/POO-Programação%20Orientada%20a%20Objetos-green?style=for-the-badge">
-<img src="https://img.shields.io/badge/UFPI-Sistemas%20de%20Informação-blueviolet?style=for-the-badge">
+O projeto foi desenvolvido com o objetivo de aplicar os principais conceitos de Programação Orientada a Objetos estudados na disciplina, por meio da construção de um sistema modular para gerenciamento de imóveis destinados à venda e aluguel.
 
-</div>
+Entre os conceitos aplicados estão:
 
----
+* Classes e Objetos
+* Encapsulamento
+* Herança
+* Polimorfismo
+* Associação entre classes
+* Sobrescrita de métodos
+* Atributos de classe
+* Métodos estáticos e de classe
+* Tratamento de exceções
+* Persistência de dados em JSON
 
-# 📖 Sobre o Projeto
-
-O **Sistema de Gerenciamento Imobiliário** foi desenvolvido como trabalho final da disciplina de **Programação Orientada a Objetos**, do curso de **Bacharelado em Sistemas de Informação da Universidade Federal do Piauí (UFPI)**.
-
-A aplicação simula o funcionamento de uma imobiliária, permitindo realizar o gerenciamento completo de clientes, proprietários, imóveis e negociações através de uma interface em terminal.
-
-O sistema foi desenvolvido utilizando uma arquitetura modular, facilitando a organização do código, reutilização de componentes e manutenção da aplicação.
-
----
-
-# 🎯 Objetivos
-
-- Aplicar os conceitos de Programação Orientada a Objetos.
-- Desenvolver um sistema organizado em módulos.
-- Simular o funcionamento de uma imobiliária.
-- Utilizar persistência de dados em arquivos JSON.
-- Aplicar boas práticas de desenvolvimento em Python.
-
----
 
 # ✨ Funcionalidades
 
-## 👤 Clientes
+### 👤 Clientes
 
-- Cadastro de clientes
-- Listagem de clientes
-- Atualização de dados
-- Remoção de clientes
-- Busca por CPF
+* Cadastro
+* Consulta
+* Atualização
+* Remoção
+* Busca por CPF
 
----
+### 👨 Proprietários
 
-## 👨 Proprietários
+* Cadastro
+* Consulta
+* Atualização
+* Remoção
+* Busca por CPF
 
-- Cadastro de proprietários
-- Listagem de proprietários
-- Atualização de dados
-- Remoção de proprietários
-- Busca por CPF
+### 🏠 Imóveis
 
----
+* Cadastro de casas e apartamentos
+* Código gerado automaticamente
+* Consulta e listagem
+* Atualização e remoção
+* Controle de disponibilidade
+* Validação de imóveis duplicados
 
-## 🏠 Imóveis
+### 🤝 Negociações
 
-- Cadastro de imóveis
-- Cadastro de casas
-- Cadastro de apartamentos
-- Listagem de imóveis
-- Atualização de imóveis
-- Remoção de imóveis
+* Venda e aluguel de imóveis
+* Associação entre cliente e imóvel
+* Atualização automática da disponibilidade
+* Histórico de negociações
 
----
+### 📊 Relatórios
 
-## 🤝 Negociações
+O sistema possui diversos relatórios gerenciais, incluindo:
 
-- Registro de negociações
-- Associação entre cliente e imóvel
-- Histórico de negociações
+* Média de valores dos imóveis
+* Quantidade de imóveis disponíveis e negociados
+* Imóveis por cidade
+* Imóveis por ano de cadastro
+* Quantidade de casas com piscina
+* Total das taxas administrativas
+* Valor total do patrimônio cadastrado
+* Histórico de negociações
+* Entre outros
 
----
 
-## 📊 Relatórios
+# 🛠️ Tecnologias
 
-- Relatório de clientes
-- Relatório de proprietários
-- Relatório de imóveis
-- Estatísticas do sistema
+* Python 3
+* JSON
+* Git
+* GitHub
 
----
-
-## ⚙️ Recursos Gerais
-
-- Validação de CPF
-- Persistência automática em JSON
-- Carregamento de dados de exemplo
-- Menus interativos
-- Tratamento de exceções
-- Código modular
-
----
-
-# 🏛️ Conceitos de POO Aplicados
-
-Durante o desenvolvimento foram utilizados os seguintes conceitos:
-
-- Classes
-- Objetos
-- Encapsulamento
-- Herança
-- Polimorfismo
-- Abstração
-- Organização em módulos
-- Reutilização de código
-
----
 
 # 📂 Estrutura do Projeto
 
 ```text
 Trabalho-Final-POO-I
 │
-├── data
-│   ├── banco.json
-│   └── dados_exemplo.json
-│
-├── menus
-│   ├── __init__.py
-│   ├── clientes.py
-│   ├── imoveis.py
-│   ├── negociacoes.py
-│   ├── principal.py
-│   ├── proprietarios.py
-│   └── relatorios.py
-│
-├── models
-│   ├── __init__.py
-│   ├── apartamento.py
-│   ├── casa.py
-│   ├── cliente.py
-│   ├── imovel.py
-│   ├── pessoa.py
-│   └── proprietario.py
-│
-├── services
-│   ├── __init__.py
-│   ├── dados_exemplo.py
-│   ├── imobiliaria.py
-│   ├── persistencia.py
-│   ├── relatorio.py
-│   └── validacoes.py
-│
-├── utils
-│   ├── __init__.py
-│   ├── entrada.py
-│   └── formatacao.py
-│
+├── data/
+├── menus/
+├── models/
+├── services/
+├── utils/
 ├── main.py
-│
 └── README.md
 ```
 
----
+### Organização
 
-# 🛠️ Tecnologias Utilizadas
+* **models/** → entidades do sistema.
+* **services/** → regras de negócio.
+* **menus/** → interface em terminal.
+* **utils/** → funções auxiliares.
+* **data/** → persistência em JSON.
 
-| Tecnologia | Descrição |
-|------------|-----------|
-| Python 3 | Linguagem principal |
-| JSON | Persistência dos dados |
-| Git | Controle de versão |
-| GitHub | Hospedagem do projeto |
-| POO | Arquitetura do sistema |
 
----
+# 💾 Persistência
 
-# 💾 Persistência de Dados
+Os dados são armazenados automaticamente em arquivos JSON.
 
-O sistema utiliza arquivos JSON para armazenar as informações cadastradas.
+| Arquivo              | Descrição                         |
+| -------------------- | --------------------------------- |
+| `banco.json`         | Dados cadastrados pelo usuário    |
+| `dados_exemplo.json` | Base para demonstração do sistema |
 
-### Arquivos
 
-| Arquivo | Finalidade |
-|----------|------------|
-| `banco.json` | Armazena os dados cadastrados durante a utilização do sistema. |
-| `dados_exemplo.json` | Contém dados utilizados para demonstração e testes da aplicação. |
-
----
 
 # 🚀 Como Executar
 
-### Clone o repositório
+Clone o repositório:
 
 ```bash
 git clone https://github.com/mayandev1/Trabalho-Final-POO-I.git
 ```
 
-### Entre na pasta
+Acesse a pasta do projeto:
 
 ```bash
 cd Trabalho-Final-POO-I
 ```
 
-### Execute o sistema
+Execute o sistema:
 
 ```bash
 python main.py
 ```
 
----
 
-# 📌 Organização do Projeto
 
-O projeto foi dividido em módulos para facilitar sua manutenção.
+# 🎯 Conceitos de POO Aplicados
 
-## Models
+* ✔ Classes e Objetos
+* ✔ Encapsulamento
+* ✔ Herança
+* ✔ Polimorfismo
+* ✔ Associação entre Classes
+* ✔ Sobrescrita de Métodos
+* ✔ Métodos Estáticos e de Classe
+* ✔ Atributos de Classe
+* ✔ Tratamento de Exceções
 
-Responsáveis por representar as entidades do sistema, como clientes, proprietários e imóveis.
 
----
-
-## Services
-
-Contêm toda a lógica de negócio da aplicação, incluindo persistência dos dados, validações e geração de relatórios.
-
----
-
-## Menus
-
-São responsáveis pela interação com o usuário através do terminal.
-
----
-
-## Utils
-
-Reúnem funções auxiliares para validação de entradas e formatação de informações.
-
----
-
-## Data
-
-Responsável pelo armazenamento permanente das informações do sistema.
-
----
-
-# 📈 Fluxo de Funcionamento
-
-```text
-Usuário
-
-      │
-
-      ▼
-
-Menus
-
-      │
-
-      ▼
-
-Services
-
-      │
-
-      ▼
-
-Models
-
-      │
-
-      ▼
-
-Persistência (JSON)
-```
-
----
-
-# 📷 Demonstração
-
-Nesta seção podem ser adicionadas capturas de tela do funcionamento do sistema.
-
-```
-📸 Tela principal
-
-📸 Cadastro de clientes
-
-📸 Cadastro de imóveis
-
-📸 Relatórios
-```
-
----
 
 # 👥 Equipe
 
-| Integrante | Área de Atuação | Principais Responsabilidades |
-|------------|-----------------|------------------------------|
-| **Allana Martins** | Backend e Regras de Negócio | Modelagem das classes, implementação das regras de negócio, validações, persistência em JSON, negociações, cálculo de taxas administrativas, tratamento de exceções e desenvolvimento da lógica do sistema. |
-| **Mayan** | Interface e Integração | Desenvolvimento da interface do sistema, criação dos menus, integração entre interface e backend, navegação, componentes visuais e relatórios gráficos. |
+| Integrante         | Responsabilidade                                                                                          |
+| ------------------ | --------------------------------------------------------------------------------------------------------- |
+| **Allana Martins** | Modelagem das classes, regras de negócio, persistência, validações, negociações e tratamento de exceções. |
+| **Mayan**          | Interface em terminal, menus, integração entre módulos, experiência do usuário e relatórios.              |
 
----
 
-# 🤝 Divisão das Responsabilidades
-
-## 👩‍💻 Allana Martins
-
-Responsável pelo desenvolvimento da lógica do sistema (**Backend**), incluindo:
-
-- Implementação da classe `Pessoa`;
-- Implementação da classe `Cliente`;
-- Implementação da classe `Proprietário`;
-- Implementação da classe `Imóvel`;
-- Implementação da classe `Casa`;
-- Implementação da classe `Apartamento`;
-- Regras de cadastro;
-- Negociações de venda e aluguel;
-- Validações dos dados;
-- Tratamento de exceções;
-- Persistência de dados em arquivos JSON;
-- Controle de disponibilidade dos imóveis;
-- Geração de códigos dos imóveis;
-- Implementação dos relatórios relacionados ao backend.
-
----
-
-## 💻 Mayan
-
-Responsável pelo desenvolvimento da **Interface** e integração do sistema, incluindo:
-
-- Interface do sistema;
-- Menus de navegação;
-- Telas de cadastro;
-- Telas de consultas;
-- Telas de negociações;
-- Relatórios gráficos;
-- Integração entre interface e backend;
-- Componentes visuais;
-- Experiência do usuário.
-
----
-
-## 🤝 Desenvolvimento em Equipe
-
-Além das responsabilidades individuais, ambos participaram das seguintes etapas:
-
-- Planejamento do sistema;
-- Testes da aplicação;
-- Correção de erros;
-- Integração dos módulos;
-- Documentação do projeto;
-- Apresentação final.
-
----
 
 # 🎓 Informações Acadêmicas
 
 **Universidade Federal do Piauí (UFPI)**
 
-**Curso:** Bacharelado em Sistemas de Informação
+* **Curso:** Bacharelado em Sistemas de Informação
+* **Disciplina:** Programação Orientada a Objetos
+* **Ano:** 2026
 
-**Disciplina:** Programação Orientada a Objetos
 
-**Ano:** 2026
-
----
 
 # 📄 Licença
 
-Este projeto foi desenvolvido exclusivamente para fins acadêmicos como trabalho da disciplina de **Programação Orientada a Objetos**, sem finalidade comercial.
-
----
-
-<div align="center">
-
-## Obrigado por visitar este projeto!
-
-Desenvolvido por **Allana Martins** e **Mayan**
-
-</div>
+Projeto desenvolvido exclusivamente para fins acadêmicos como trabalho da disciplina de Programação Orientada a Objetos.
